@@ -1,5 +1,5 @@
+import testimonialsJson from '../../../data/testimonials.json'
 import './Testimonials.scss'
-import testimonialsJson from '/src/data/testimonials.json'
 
 type testimonial = {
     name: string;
