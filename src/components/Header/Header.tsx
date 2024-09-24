@@ -1,6 +1,10 @@
+import {useState} from "react";
+
 import logo from '/images/logo.svg';
 import './Header.scss'
-import Button from "../Button/Button.tsx";
+import useWindowDimensions from "../../hooks/useWindowDimensions.tsx";
+import HeaderBar from "./HeaderBar/HeaderBar.tsx";
+import HeaderMenu from "./HeaderMenu/HeaderMenu.tsx";
 
 type link = {
     location: string;
@@ -23,25 +27,21 @@ const headerLinks: link[] = [
 ]
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+    const {width} = useWindowDimensions();
+
+    function handleToggleMenu() {
+        setIsOpen(!isOpen);
+    }
 
     return (
         <header className="header grid-bleed">
             <div className="header__content">
-                <img className='header__logo' src={logo} alt=""/>
+                <img className="header__logo" src={logo} alt=""/>
 
-                <nav className="header__nav">
-                    <ul className="header__links">
-                        {headerLinks.map((link) => (
-                            <li>
-                                <a href={link.href} aria-label={"Go to " + link.location + " Page"}>
-                                    {link.location}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                    
-                    <Button className='button__primary button__primary--white' destination='#'>Contact</Button>
-                </nav>
+                {width > 1024 ? <HeaderBar headerLinks={headerLinks}/> :
+                    <HeaderMenu headerLinks={headerLinks} isOpen={isOpen} onClick={handleToggleMenu}/>}
+
             </div>
         </header>
     )

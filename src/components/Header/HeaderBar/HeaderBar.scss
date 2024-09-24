@@ -1,0 +1,19 @@
+@use '/src/assets/styles/abstract' as a;
+
+.header-bar {
+  &__nav {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: a.$clr-white;
+  }
+}

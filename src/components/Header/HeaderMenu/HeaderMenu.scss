@@ -1,0 +1,38 @@
+@use '/src/assets/styles/abstract' as a;
+
+.header-menu {
+  display: grid;
+  justify-items: center;
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+  width: calc(100% - 1.5rem * 2);
+  padding: 2.5rem;
+  background-color: white;
+  transform: translate(-50%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1.5rem;
+    right: 0;
+    border-width: 1.5rem;
+    border-style: solid;
+    border-color: transparent a.$clr-white transparent transparent;
+  }
+  
+  &__nav {
+    display: flex;
+    gap: 2rem;
+    color: a.$clr-white;
+  }
+  
+  &__links {
+    display: grid;
+    gap: 2rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: a.$clr-grey-500;
+  }
+}

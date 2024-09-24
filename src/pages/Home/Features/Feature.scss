@@ -42,15 +42,17 @@
 
   &__section-text {
     display: grid;
+    justify-items: center;
     gap: 2rem;
     padding: 4rem 1.5rem;
     
     @include a.breakpoint(medium) {
+      justify-items: flex-start;
       padding: 0 8rem;
     }
     
     &--body {
-      color: a.$clr-grey;
+      color: a.$clr-grey-500;
     }
   }
 

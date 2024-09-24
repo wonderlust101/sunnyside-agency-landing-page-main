@@ -1,6 +1,7 @@
 @use '/src/assets/styles/abstract' as a;
 
 .button {
+  display: block;
   width: max-content;
   font-family: 'Fraunces', serif;
   font-size: 0.9375rem;
@@ -22,6 +23,11 @@
         color: a.$clr-white;
         background-color: a.$clr-white-100;
       }
+    }
+
+    &--yellow {
+      color: a.$clr-black;
+      background-color: a.$clr-yellow-600;
     }
   }
 

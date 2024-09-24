@@ -3,8 +3,12 @@
 .header {
   position: absolute;
   width: 100%;
-  padding: 2rem 3rem;
+  padding: 1.5rem 0;
   z-index: 100;
+  
+  @include a.breakpoint(medium) {
+    padding: 4rem 0;
+  }
   
   &__logo {
     width: 8rem;
@@ -19,22 +23,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__nav {
-    display: flex;
-    //display: none;
-    gap: 3rem;
-    align-items: center;
-  }
-  
-  &__links {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.4;
-    color: a.$clr-white;
   }
 }

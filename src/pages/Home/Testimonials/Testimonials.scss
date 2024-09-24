@@ -17,6 +17,8 @@
     font-size: 1rem;
     font-weight: 900;
     letter-spacing: 0.25rem;
+    color: a.$clr-grey-500;
+    opacity: 0.75;
 
     @include a.breakpoint(medium) {
       font-size: 1.25rem;
@@ -26,7 +28,7 @@
   &__grid {
     display: grid;
     justify-content: center;
-    width: min(100%, 80rem);
+    width: min(100%, 100rem);
 
     @include a.breakpoint(medium) {
       grid-template-columns: 1fr 1fr 1fr;
@@ -47,7 +49,7 @@
   }
 
   &__quote {
-    color: a.$clr-grey;
+    color: a.$clr-grey-600;
   }
 
   &__testimonial-user {
@@ -64,7 +66,7 @@
     font-weight: 600;
     line-height: 1.8;
     letter-spacing: -0.00625rem;
-    color: a.$clr-grey;
+    color: a.$clr-grey-500;
     opacity: 0.75;
   }
 }
