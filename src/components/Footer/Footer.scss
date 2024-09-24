@@ -1,0 +1,68 @@
+@use '/src/assets/styles/abstract' as a;
+
+.footer{
+  background-color: a.$clr-green-200;
+  
+  &__image-gallery {
+    grid-area: 1/1 / 1/4;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    
+    @include a.breakpoint(medium) {
+      grid-template: 1fr / repeat(4, 1fr);
+
+    }
+  }
+
+  &__image {
+    width: 100%;
+
+    & > *{
+      width: inherit;
+    }
+  }
+  
+  &__content {
+    grid-area: 2/2;
+    display: grid;
+    justify-items: center;
+    gap: 2.5rem;
+    padding: 4rem 0;
+  }
+  
+  &__logo {
+    width: 12rem;
+  }
+  
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    width: min(100%, 30rem);
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.00806rem;
+    color: a.$clr-green-500;
+    
+  }
+  
+  &__link {
+    &:hover {
+      color: a.$clr-white;
+    }
+  }
+  
+  &__socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    
+    & > * {
+      fill: a.$clr-green-700;
+      
+      &:hover {
+        fill: a.$clr-white;
+      }
+    }
+  }
+}

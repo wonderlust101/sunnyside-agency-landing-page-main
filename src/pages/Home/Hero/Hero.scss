@@ -1,0 +1,44 @@
+@use '/src/assets/styles/abstract' as a;
+
+.hero {
+  position: relative;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+
+  &__image {
+    position: absolute;
+    z-index: -1;
+    width: inherit;
+    height: inherit;
+
+    & > * {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    justify-items: center;
+    gap: 4rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: a.$clr-white;
+    transform: translate(-50%, -50%);
+    
+    @include a.breakpoint(medium) {
+      top: 45%;
+      gap: 6rem;
+    }
+  }
+  
+  &__arrow {
+    width: 3rem;
+  }
+}

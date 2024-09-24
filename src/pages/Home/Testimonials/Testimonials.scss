@@ -1,0 +1,70 @@
+@use '/src/assets/styles/abstract' as a;
+
+.testimonials {
+  display: grid;
+  justify-items: center;
+  gap: 4rem;
+  padding: 4rem 0 6rem;
+  text-align: center;
+
+  @include a.breakpoint(medium) {
+    gap: 5rem;
+  }
+
+  &__header {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.25rem;
+
+    @include a.breakpoint(medium) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    justify-content: center;
+    width: min(100%, 80rem);
+
+    @include a.breakpoint(medium) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__testimonial {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: max-content 1fr max-content;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  &__profile-img {
+    width: 4.5rem;
+    border-radius: 50rem;
+  }
+
+  &__quote {
+    color: a.$clr-grey;
+  }
+
+  &__testimonial-user {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  &__testimonial-user-name {
+    font-size: 1.125rem;
+  }
+
+  &__testimonial-role {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.8;
+    letter-spacing: -0.00625rem;
+    color: a.$clr-grey;
+    opacity: 0.75;
+  }
+}

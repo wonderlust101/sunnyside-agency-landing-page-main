@@ -1,6 +1,47 @@
 @use '../abstract/index' as a;
 
 h1, h2, h3, h4,
-h5, h6, p {
+h5, h6,  {
+  font-family: 'Fraunces', serif;
 
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.39063rem;
+  text-transform: uppercase;
+  
+  @include a.breakpoint(medium) {
+    font-size: 3.5rem;
+    letter-spacing: 0.54688rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.01431rem;
+  
+  @include a.breakpoint(medium) {
+    font-size: 2.5rem;
+    letter-spacing: -0.01788rem;
+  }
+}
+
+h3 {
+  
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+a {
+  font-family: 'Barlow', sans-serif;
+  text-decoration: none;
+  color: inherit;
 }
