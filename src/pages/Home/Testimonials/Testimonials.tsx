@@ -17,9 +17,9 @@ export default function Testimonials() {
             <h2 className='testimonials__header'>CLIENT TESTIMONIALS</h2>
 
             <div className="testimonials__grid">
-                {testimonials.map((testimonial) => (
-                    <article className="testimonials__testimonial">
-                        <img className='testimonials__profile-img' src={`/images/${testimonial.img}`} alt=""/>
+                {testimonials.map((testimonial, index) => (
+                    <article className="testimonials__testimonial" key={index}>
+                        <img className='testimonials__profile-img' src={`./images/${testimonial.img}`} alt={`Profile of ${testimonial.name}`}/>
                         
                         <p className='testimonials__quote'>{testimonial.quote}</p>
                         

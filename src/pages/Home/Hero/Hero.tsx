@@ -7,7 +7,7 @@ export default function Hero() {
 
     return (
         <header className="hero">
-            <picture className="hero__image" role="presentation">
+            <picture className="hero__image" aria-hidden={true}>
                 <source srcSet={heroImageDesktop} media={"(min-width: 48rem)"}/>
                 <img src={heroImageMobile} alt=""/>
             </picture>

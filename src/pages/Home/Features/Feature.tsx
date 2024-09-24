@@ -14,7 +14,7 @@ export default function Feature() {
     return (
         <section className="feature">
             <article className="feature__section--wide">
-                <picture className="feature__image" role="presentation">
+                <picture className="feature__image" aria-hidden={true}>
                     <source srcSet={eggImageDesktop} media={"(min-width: 48rem)"}/>
                     <img src={eggImageMobile} alt=""/>
                 </picture>
@@ -28,7 +28,7 @@ export default function Feature() {
             </article>
 
             <article className="feature__section--wide">
-                <picture className="feature__image" role="presentation">
+                <picture className="feature__image" aria-hidden={true}>
                     <source srcSet={cupImageDesktop} media={"(min-width: 48rem)"}/>
                     <img src={cupImageMobile} alt=""/>
                 </picture>
@@ -43,7 +43,7 @@ export default function Feature() {
 
             <div className="feature__two-column">
                 <article className="feature__section">
-                    <picture className="feature__image" role="presentation">
+                    <picture className="feature__image" aria-hidden={true}>
                         <source srcSet={cherryImageDesktop} media={"(min-width: 48rem)"}/>
                         <img src={cherryImageMobile} alt=""/>
                     </picture>
@@ -56,7 +56,7 @@ export default function Feature() {
                 </article>
 
                 <article className="feature__section">
-                    <picture className="feature__image" role="presentation">
+                    <picture className="feature__image" aria-hidden={true}>
                         <source srcSet={orangeImageDesktop} media={"(min-width: 48rem)"}/>
                         <img src={orangeImageMobile} alt=""/>
                     </picture>

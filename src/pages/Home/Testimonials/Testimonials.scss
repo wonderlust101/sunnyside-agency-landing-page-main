@@ -6,6 +6,7 @@
   gap: 4rem;
   padding: 4rem 0 6rem;
   text-align: center;
+  background-color: a.$clr-off-white;
 
   @include a.breakpoint(medium) {
     gap: 5rem;

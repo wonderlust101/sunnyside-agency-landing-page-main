@@ -39,22 +39,22 @@ export default function Footer() {
     return (
         <footer className="footer grid-bleed">
             <div className="footer__image-gallery">
-                <picture className="footer__image" role="presentation">
+                <picture className="footer__image" aria-hidden={true}>
                     <source srcSet={milkImageDesktop} media={"(min-width: 48rem)"}/>
                     <img src={milkImageMobile} alt=""/>
                 </picture>
 
-                <picture className="footer__image" role="presentation">
+                <picture className="footer__image" role="presentation" aria-hidden={true}>
                     <source srcSet={orangeImageDesktop} media={"(min-width: 48rem)"}/>
                     <img src={orangeImageMobile} alt=""/>
                 </picture>
 
-                <picture className="footer__image" role="presentation">
+                <picture className="footer__image" role="presentation" aria-hidden={true}>
                     <source srcSet={coneImageDesktop} media={"(min-width: 48rem)"}/>
                     <img src={coneImageMobile} alt=""/>
                 </picture>
 
-                <picture className="footer__image" role="presentation">
+                <picture className="footer__image" role="presentation" aria-hidden={true}>
                     <source srcSet={sugarImageDesktop} media={"(min-width: 48rem)"}/>
                     <img src={sugarImageMobile} alt=""/>
                 </picture>
@@ -68,7 +68,7 @@ export default function Footer() {
 
                 <ul className="footer__links">
                     {footerLinks.map((link) => (
-                        <li>
+                        <li key={link.location}>
                             <a className="footer__link" href={link.href}
                                aria-label={"Go to " + link.location + " Page"}>
                                 {link.location}

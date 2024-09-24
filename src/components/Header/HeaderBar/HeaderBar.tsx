@@ -16,7 +16,7 @@ export default function HeaderBar({headerLinks}: headerMenuProps) {
         <nav className="header-bar__nav">
             <ul className="header-bar__links">
                 {headerLinks.map((link) => (
-                    <li>
+                    <li key={link.location}>
                         <a  href={link.href} aria-label={"Go to " + link.location + " Page"}>
                             {link.location}
                         </a>

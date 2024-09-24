@@ -22,7 +22,7 @@ export default function HeaderList({headerLinks, onClick, isOpen}: headerListPro
             {isOpen && (<nav className="header-menu">
                 <ul className="header-menu__links">
                     {headerLinks.map((link) => (
-                        <li>
+                        <li key={link.location}>
                             <a href={link.href} aria-label={"Go to " + link.location + " Page"}>
                                 {link.location}
                             </a>
